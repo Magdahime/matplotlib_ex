@@ -24,7 +24,7 @@ def get_years(reader):
 
 def get_chart_data(country, filename):
     try:
-        with open(filename) as file:
+        with open('data/' + filename) as file:
             reader = csv.reader(file)
             years = get_years(reader)
             rates = get_data(country, reader)

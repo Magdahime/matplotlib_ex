@@ -27,4 +27,4 @@ plt.ylabel('', fontsize=20)
 plt.tick_params(axis='both', which='major', labelsize=14)
 
 save_filename = input("How would you like to name your chart?: ")
-plt.savefig(save_filename, bbox_inches='tight')
+plt.savefig('output/' + save_filename, bbox_inches='tight')

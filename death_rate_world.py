@@ -10,7 +10,7 @@ filename = input("Enter the name of csv data file: ")
 year = input("Enter the year from which you want your data to be processed: ")
 data_dict = {}
 try:
-    with open(filename) as file:
+    with open('data/' + filename) as file:
         reader = csv.reader(file)
         index = hp.find_year(reader, year)
         for row in reader:
@@ -41,4 +41,4 @@ wm.add("Less than 10 people", low)
 wm.add("More than 10 people and less than 20", average)
 wm.add("20 and more", high)
 save_filename = input("Enter new name of the chart: ")
-wm.render_to_file(save_filename)
+wm.render_to_file('output/' + save_filename)
